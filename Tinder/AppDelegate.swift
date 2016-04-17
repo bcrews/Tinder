@@ -8,8 +8,12 @@
 */
 
 import UIKit
-
 import Parse
+import Bolts
+import FBSDKCoreKit
+import FBSDKLoginKit
+
+
 
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
@@ -24,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //--------------------------------------
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+      
+      FBSDKApplicationDelegate .sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+      
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
         Parse.enableLocalDatastore()
@@ -88,15 +95,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //
         //  Swift 2.0
         //
-        //        if #available(iOS 8.0, *) {
-        //            let types: UIUserNotificationType = [.Alert, .Badge, .Sound]
-        //            let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
-        //            application.registerUserNotificationSettings(settings)
-        //            application.registerForRemoteNotifications()
-        //        } else {
-        //            let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
-        //            application.registerForRemoteNotificationTypes(types)
-        //        }
+                if #available(iOS 8.0, *) {
+                    let types: UIUserNotificationType = [.Alert, .Badge, .Sound]
+                    let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
+                    application.registerUserNotificationSettings(settings)
+                    application.registerForRemoteNotifications()
+                } else {
+                    let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
+                    application.registerForRemoteNotificationTypes(types)
+                }
 
         return true
     }
@@ -153,4 +160,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
     //     return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, session:PFFacebookUtils.session())
     // }
+  
+  
+  func applicationDidBecomeActive(application: UIApplication) {
+    
+    FBSDKAppEvents.activateApp()
+    
+  }
+  
+  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+    return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+  }
+
 }

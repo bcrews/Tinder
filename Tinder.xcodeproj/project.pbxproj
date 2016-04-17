@@ -10,6 +10,12 @@
 		42C05AB31CC323680065884A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C05AB11CC323680065884A /* AppDelegate.swift */; };
 		42C05AB41CC323680065884A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C05AB21CC323680065884A /* ViewController.swift */; };
 		42C05AB81CC324590065884A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C05AB71CC324590065884A /* Parse.framework */; };
+		42C05AD01CC3400E0065884A /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C05ACC1CC3400E0065884A /* ParseCrashReporting.framework */; };
+		42C05AD11CC3400E0065884A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C05ACD1CC3400E0065884A /* ParseFacebookUtils.framework */; };
+		42C05AD21CC3400E0065884A /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C05ACE1CC3400E0065884A /* ParseFacebookUtilsV4.framework */; };
+		42C05AD31CC3400E0065884A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C05ACF1CC3400E0065884A /* ParseUI.framework */; };
+		42C05AD71CC342540065884A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C05AD51CC342540065884A /* FBSDKCoreKit.framework */; };
+		42C05AD81CC342540065884A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C05AD61CC342540065884A /* FBSDKLoginKit.framework */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
 		81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816B1A49DB6800E65899 /* Bolts.framework */; };
@@ -23,6 +29,13 @@
 		42C05AB11CC323680065884A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Tinder/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		42C05AB21CC323680065884A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Tinder/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		42C05AB71CC324590065884A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		42C05ACC1CC3400E0065884A /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		42C05ACD1CC3400E0065884A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		42C05ACE1CC3400E0065884A /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		42C05ACF1CC3400E0065884A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		42C05AD41CC340260065884A /* Tinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		42C05AD51CC342540065884A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		42C05AD61CC342540065884A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,9 +54,15 @@
 			files = (
 				81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */,
 				81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */,
+				42C05AD81CC342540065884A /* FBSDKLoginKit.framework in Frameworks */,
+				42C05AD31CC3400E0065884A /* ParseUI.framework in Frameworks */,
+				42C05AD71CC342540065884A /* FBSDKCoreKit.framework in Frameworks */,
 				81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */,
 				81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */,
 				42C05AB81CC324590065884A /* Parse.framework in Frameworks */,
+				42C05AD21CC3400E0065884A /* ParseFacebookUtilsV4.framework in Frameworks */,
+				42C05AD01CC3400E0065884A /* ParseCrashReporting.framework in Frameworks */,
+				42C05AD11CC3400E0065884A /* ParseFacebookUtils.framework in Frameworks */,
 				81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +73,7 @@
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				42C05AD41CC340260065884A /* Tinder-Bridging-Header.h */,
 				814C3AC81B69877600E307BB /* Images.xcassets */,
 				814C3AC91B69877600E307BB /* Info.plist */,
 			);
@@ -92,6 +112,12 @@
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42C05AD51CC342540065884A /* FBSDKCoreKit.framework */,
+				42C05AD61CC342540065884A /* FBSDKLoginKit.framework */,
+				42C05ACC1CC3400E0065884A /* ParseCrashReporting.framework */,
+				42C05ACD1CC3400E0065884A /* ParseFacebookUtils.framework */,
+				42C05ACE1CC3400E0065884A /* ParseFacebookUtilsV4.framework */,
+				42C05ACF1CC3400E0065884A /* ParseUI.framework */,
 				42C05AB71CC324590065884A /* Parse.framework */,
 				81BA816B1A49DB6800E65899 /* Bolts.framework */,
 				81BA81751A49E0C500E65899 /* System Frameworks */,

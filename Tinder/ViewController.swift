@@ -9,6 +9,8 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
   
@@ -22,7 +24,9 @@ class ViewController: UIViewController {
       print("Object has been saved.")
     }
     
-    
+    let loginButton: FBSDKLoginButton = FBSDKLoginButton()
+    loginButton.center = self.view.center
+    self.view.addSubview(loginButton)
   }
   
   override func didReceiveMemoryWarning() {
